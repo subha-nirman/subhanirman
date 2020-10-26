@@ -1,0 +1,63 @@
+### PUBINTEL
+
+title: Subha Nirman
+description: Home Painting.
+# baseurl: "/pubintel" # name of the repository
+baseurl:"subha-nirman"
+# email: info@pubin.tel
+
+# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
+# Used for Sitemap.xml and your RSS feed
+# url: http://iapyaniv.github.io
+
+highlighter: rouge
+markdown: kramdown
+### exclude the instructions / write-up in the README.md
+
+#YAML Front Matter Defaults
+# defaults:
+#   -
+#     scope:
+#       path: '_pages'
+#     values:
+#       permalink: /:collection/:basename/
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Tracker
+analytics: UA-125466952-1
+
+
+# Comments
+disqus-shortname:
+
+# permalink: pretty
+
+#optimization
+#compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+
+sass:
+ style: compressed
+
+include: ["_pages"]
+
+exclude:
+- README.md
+- LICENSE.md
+
+plugins: [jekyll-seo-tag, jekyll-paginate, jekyll-sitemap, jekyll-feed]
+
+  # jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  # jekyll-feed # Create an Atom feed using the official Jekyll feed gem

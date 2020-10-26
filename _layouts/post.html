@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h2>{{page.title}}</h2>
+<!-- <p class="meta"><small>{{page.author}} | {{page.date | date: '%B %Y'}} | <a class="theme" onclick="theme()">Night Mode?</a> | File: <a href={{site.baseurl}}/{{page.category}}> /{{page.category}}</a></small></p> -->
+<p class="meta"><small>{{page.author}} | {{page.date | date: '%B %-d, %Y'}} | File under: {% for category in page.categories %} <em>{{category}}</em>/ {% endfor %} </small></p>
+ <!-- %d, -->
+
+{{content}}
+
+<!-- Comments only for posts -->
+{% if page.path contains '_posts' %}
+    {% if site.disqus-shortname %}
+        {% include disqus.html %}
+    {% endif %}
+{% endif %}
