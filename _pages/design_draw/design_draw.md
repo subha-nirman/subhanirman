@@ -1,9 +1,23 @@
 ---
 layout: page
-title: Home Painting
-description: Subha Nirman Home Painting Service
-name: home
-permalink: "/home/"
+title: Design & Drawing
+description: Design & Drawing Service
+name: design_draw
+permalink: "/design_draw/"
+images:
+  - image_path: /images/design/home.jpg
+    title: Home Design
+  - image_path: /images/design/kit.jpg
+    title: Kitchen Design
+  - image_path: /images/design/kitchen.jpg
+    title: Kitchen layout
+  - image_path: /images/design/triangle.jpg
+    title: Ergonomic Kitchen Design
 ---
-
-<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FSubhanirman1%2Fvideos%2F2848907158753243%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+<ul class="photo-gallery">
+  {% for image in page.images %}
+    <li>
+    <img src="{{ image.image_path }}" alt="{{ image.title }}">
+    </li>
+    {% endfor %}
+</ul>
